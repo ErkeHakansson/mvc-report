@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Magic number{% endblock %}
+
+    {% block body %}
+
+    <main>
+
+    <h1 style="color: Lime;"> Magic number </h1>
+    <p style="color: Chocolate;"> Welcome to my awesome magical homepage ! </p>
+    <p style="color: Purple; font-size: 40px; font-style: italic; font-weight: bold;"> This is the current magic number: {{ number }} </p>
+
+    <p style="color: Green;"> An image which can be clicked on. </p>
+    <a href="{{ asset('img/glider.svg') }}">
+        <img src="{{ asset('img/glider.svg') }}" alt="">
+    </a>
+
+    </main>
+
+    {% endblock %}

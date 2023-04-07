@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+    {% block body %}
+    <main>
+
+    <div class="two-col-layout">
+
+        <main class="main">
+        
+            <article>
+
+                <h1 style ="color:green;"> Om kursen MVC </h1>
+                    <figure>
+                        <img src = "img/MVC.png" width="350" alt="MVC bild">
+                    </figure>
+
+                <p> Kursen heter Objektorienterade webbteknologier - MVC. </p>
+                <p> Kursen fokuseras på objektorienterade programmeringstekniker i programmeringsspråket PHP. </p>
+                <p> Exempelvis hur man hanterar SQL-databas tillsammans med PHP Data Objects. <p>
+                <p> Dessutom lär man om utveckling av webbapplikationer i ett ramverk med sådana tekniker som webbserver, HTML, CSS, och SQL. </p>
+                <p> Kursens syfte är att man ska kunna utveckla databasdrivna webbapplikationer och ska kunna hantera de verktyg och miljöer som används vid utveckling av de webbapplikationerna. </p>
+            </article>
+
+        </main>
+
+        <aside class="aside">
+            <h4 style ="color:green;"> Länk till kursens Git-repo </h4>
+            <a href ="https://github.com/dbwebb-se/mvc"> MVC kursrepo på Github </a>
+            <br>
+            <br> <a href ="https://github.com/ErkeHakansson"> Mitt GitHub-repo </a>
+        </aside>
+
+    </div>
+
+    </main>
+    {% endblock %}
