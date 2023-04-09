@@ -8,10 +8,33 @@
 
         <article class="article">
 
-        <h1>Redovisningtexter</h1>
-        <p>Skriven av Erke Håkansson, uppdaterad 2023-04-07.</p>
+        <h1>Redovisningstexter</h1>
+        <p>Skriven av Erke Håkansson, uppdaterad 2023-04-08.</p>
 
         <h2 id="kmom01">kmom01</h2>
+
+        <p> Det var spännande att börja en ny kurs som handlar om objektorienterade webbteknologier som används i programmeringsspråket PHP. </p>
+        <p> Har gått kursen grunderna i java innan, och dbwebb kurserna som python, oopython där lärde mig om objektorientering. </p>
+        <p> Har förstått att objekt skapas utifrån ett klass, där klass fungerar som en template(mall eller kodstruktur) för ett objekt, för att klass innehåller funktioner(methoder) och variabler(properties). </p>
+        <p> För att skapa klasser för objekt man måste kunna grunder om hur klassen byggs, exempelvis vilken typ properties ska bli, t. ex. sträng eller integer, hur de properties returneras i methoder, t. ex. med hjälp av $this. </p>
+
+        <p> Filerna kommer från pakethanterare Composer, där med hjälp av command: "composer create-project symfony/website-skeleton projekt-namn" kommer projekt skeleton filerna, exempelvis mappen public, src, templates och filen composer.json som innehåller namn på paketen med versioner. </p>
+        <p> När det gäller kodstrukturen som kommit med projekt skeleton tror att den viktigaste mappen är mappen public som kan innehålla viktiga filerna för att webbsidan ska fungera, t. ex. filen index.php med vendor autoload eller konfigurationsfil för Apache webserver .htaccess som lagts till. </p>
+        <p> I mappen src finns mappen Controller som innehåller php filerna med controller klass som innehåller några methoder med route(URL) t. ex. /about eller /lucky, där #[Route (path)] kallas också PHP attributes(annotation routes) som är kopplat till en funktion(callback) som returnerar svaret med Response om de matchas. </p>
+        <p> I mappen templates finns twig filerna som hjälper att rendera en webbsida, startsida är base.html.twig, där man kan inkludera path till några andra webbsidor, t. ex. about, report, med hjälp av feature "template inheritance" som extend den base template. </p>
+
+        <p> Efter att man installerat Symfony tool Encore har det adderats mappen assets som hanterar css och javascript filerna, i assets finns mappen styles med css filen som behövs för att styla webbplatsen, assets körs sedan med command npm run build. </p>
+        <p> Tänkte att det var lite svårt att förstå hur det fungerar i början, men att gå igenom övningen har hjälpt mycket att förstå Symfony kodbasen. </p>
+
+        <p> I artikeln PHP the right way var det intressant att läsa om benefits av användning av templating och compiling med templatemotor Twig. Exempelvis var det intressant att veta att det är mest designers som använder templates och att med templates det är mycket lättare att organisera och hantera koden. </p>
+        <p> De områdena i den artikeln som vill veta mer om är exempelvis Web Application Security och Databases. </p>
+
+        <p> Min TIL är hur man installerar ramverket Symfony och sammanställer en webbplats med hjälp av det. </p>
+        <p> Har också lärt att det finns design pattern MVC som är grunden för att bygga en webbplats, där M betyder Model, V är View, C är Controller som är en del av ramverket Symfony. </p>
+        <p> Där kontroller är en PHP funktion som man skapar för att läsa information från Request objekt och skapa och returnera data med en Response objekt i form av exempelvis HTML sida eller JSON data. </p>
+        <p> Templates as View används för att rendera webbsidor med hjälp av twig filerna i vilka man skriver HTML kod för webbsida. </p>
+        <p> Har också uppdaterad mina kunskaper om hur man skapar ny repository och pushar, taggar filerna till Github. </p>
+        <p> I helhet tycker att det var intessant att göra det första kursmomentet, har lärt mig massa nytt och repeterat HTML, PHP och CSS. </p>
 
         <h2 id="kmom02">kmom02</h2>
 
