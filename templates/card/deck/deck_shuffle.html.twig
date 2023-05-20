@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card Game{% endblock %}
+
+{% block body %}
+
+<main>
+
+<h1>Blandar kort</h1>
+
+<p> Visar {{ num_cards }} kort i kortleken när den har blandats. </p>
+
+
+</main>
+
+<ul class="card-utf8">
+    {% for shuffle in cardShuffle %}
+        {{ shuffle }}
+    {% endfor %}
+</ul>
+
+
+<a href="{{ path('card') }}" style = "text-align: center; font-size: 25px;"> Back to Landing page </a> <br>
+
+{% endblock %}
