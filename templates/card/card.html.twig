@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card Game{% endblock %}
+
+{% block body %}
+
+<main>
+
+<h1>Card game</h1>
+
+<p> Klassens struktur. </p>
+<p> Har skapat fyra applikationsklasser i report i mappen src/CardGame: 1. Card.php, 2. CardGraphic.php, 3. CardHand.php och 4. DeckOfCards.php. </p>
+<p> Subclass CardGraphic har en variabel med grafisk kortrepresentation och extends basclass Card - arv relation. </p>
+<p> Class CardHand är en korthand, innehåller två klasser: CardGraphic och DeckOfCards - svag komposition relation. </p>
+<p> Class DeckOfCards innehåller en method med kortlek med 52 kort och fyra methoder med kort sorterade per value och färg. </p>
+
+<figure>
+    <img src= "img/UML-diagram.png" width="590" alt="UML-diagram">
+    <figcaption style="font-size:15px;">UML-diagram</figcaption>
+</figure>
+
+<p> Där genomskinlig romb betyder att den är aggregat - svag relation, för att kort kan existera som ett eget objekt även utan korthand, som är en variant av komposition. </p>
+
+
+    <a href="{{ path('card') }}">Landing page - card game </a> <br>
+    <a href="{{ path('deck') }}">All cards sorted </a> <br>
+    <a href="{{ path('deck_shuffle') }}">Shuffled cards </a> <br>
+    <a href="{{ path('deck_draw') }}">Draw one card </a> <br>
+    <a href="{{ path('deck_draw_number', {num: 5}) }}">Draw a few cards </a>
+
+</main>
+
+{% endblock %}
