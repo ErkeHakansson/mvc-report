@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Deck draw number{% endblock %}
+
+{% block body %}
+
+    <main>
+
+        <h1>Deck draw number of cards - 5 </h1>
+
+        <p> Antal kort kvar i kortleken: {{ num_cards_left_draw_five }}</p>
+
+    </main>
+        
+        <ul class="card-utf8">
+            {% for cards_five in draw_five_cards %}
+                {{ cards_five }}
+            {% endfor %}
+        </ul>
+
+        <a href="{{ path('card') }}" style = "text-align: center; font-size: 25px;"> Back to Landing page </a> <br>
+
+{% endblock %}
