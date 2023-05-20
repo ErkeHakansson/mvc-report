@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card Game{% endblock %}
+
+{% block body %}
+
+<main>
+
+<h1>Deck</h1>
+
+<p> Visar samtliga kort i kortleken sorterade per färg och värde. </p>
+
+
+</main>
+
+<p class="card-utf8">
+    <i class="clubs"></i> <br>
+    <i class="diamonds"></i> <br>
+    <i class="hearts"></i> <br>
+    <i class="spades"></i>
+</p>
+
+
+<a href="{{ path('card') }}" style = "text-align: center; font-size: 25px;"> Back to Landing page </a> <br>
+
+{% endblock %}
