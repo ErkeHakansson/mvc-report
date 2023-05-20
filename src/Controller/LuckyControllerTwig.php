@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LuckyControllerTwig extends AbstractController
 {
+    // Kmom01 routes i navbaren
     #[Route("/", name: "me")]
     public function me(): Response
     {
@@ -38,10 +39,17 @@ class LuckyControllerTwig extends AbstractController
         return $this->render('report.html.twig');
     }
 
-    #[Route("/api/quote", name: "quote")]
-    public function quote(): Response
+    // Kmom02 - two new routes i navbaren: api, card
+    #[Route("/api", name: "api")]
+    public function jsonApi(): Response
     {
-        return $this->render('quote.html.twig');
+        return $this->render('api/api.html.twig');
+    }
+
+    #[Route("/card", name: "card")]
+    public function card(): Response
+    {
+        return $this->render('card/card.html.twig');
     }
 
 }
