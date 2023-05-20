@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Api routes{% endblock %}
+
+    {% block body %}
+
+    <main>
+
+    <p>These are the Json routes used in developing this game.</p>
+
+        <a href="{{ path('api') }}">Landing page - api </a> <br>
+        <a href="{{ path('api_quote') }}">Quotes - api </a> <br>
+        <a href="{{ path('api_deck') }}">All cards sorted - api </a> <br>
+
+        <form method="post" action="/api/deck/shuffle">
+            <input type="submit" value=" Api shuffle cards">
+        </form>
+
+        <form method="post" action="/api/deck/draw">
+            <input type="submit" value="Api draw one card">
+        </form>
+
+        <form method="post" action="/api/deck/draw/5">
+            <input type="submit" value="Api draw five cards">
+        </form>
+
+    </main>
+
+    {% endblock %}
