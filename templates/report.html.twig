@@ -37,6 +37,24 @@
         <p> I helhet tycker att det var intessant att göra det första kursmomentet, har lärt mig massa nytt och repeterat HTML, PHP och CSS. </p>
 
         <h2 id="kmom02">kmom02</h2>
+        <p> Det var både utmanande och intressant att göra kmom02.</p>
+        <p> Objektorienterade konstruktionen arv är när subclass ärver alla properties och methods från basclass. Används genom nyckelordet "extends". </p>
+        <p> Komposition som jag har förstått är när en klass använder(has-a) en annan klass. Beroende på hur stark relationen är mellan klasserna i komposition man kan urskilja en aggregat relation - när det är svag koppling mellan klasserna. </p>
+        <p> Interface är en objektorienterad konstruktion som innehåller en eller flera public methoder utan variabler, används genom nyckelordet "interface" i php. När klass implementerar en interface, lovar det att använda alla interfaces methoder vid senare tillfälle. </p>
+        <p> Trait är en kod som kan innehålla metoder och variabler som kan återanvändas i en eller flera klasser när den använder(use) trait. Till skillnad från klasser trait kan inte leva på egen hand, utan borde användas i klasser för att utöka deras funktionalitet. Används genom nyckelordet "trait" traitName och "use" traitName i php. </p>
+        <p> Har skapat fyra klasser i src med arv och aggregat relation. </p>
+        <p> Klass CardGraphic extends klass Card som är en arv relation. </p>
+        <p> Klass CardHand använder klass CardGraphic och klass DeckOfCard i sina methoder för att shuffla kort from kortleken. </p>
+        <p> Sedan har använt klass CardHand i card och json controllers genom att skapa ett nytt CardHand object </p>
+        <p> Sedan har skapat två nya mappen card och api i templates, där skapade landningssidor med routes i, där skrivit ut $data variablerna från CardGame controllerns routes med bland annat for, endfor funktion i html.twig filen. </p>
+        <p> Har sorterad spader, hjärter, ruter och klöver per färg och value med utf-8 tecken i app.css klass, för att visualisera i deck.html.twig filen. </p>
+        <p> Tyckte att svåraste var att klura ut hur man kan dra ett antal kort från kortleken. Har löst det med hjälp av array_diff funktion och variabler sparade i session. </p>
+        <p> Har löst Json api krav 5,6 genom att skapa html post formulär i api.html.twig file med länk till JsonApiControllers routes som har methods:['POST']. </p>
+        <p> Är nöjd med min uppgift så länge, tror att det blivit bra, man kan nu shuffla hela kortlek och dra ett eller fem kort från kortleken. Det som kunde blivit bättre är att man kunde implementera html formuläret, för att användare kunde välja själv olika antal kort att dra ut från kortleken. </p>
+        <p> Min TIL är hur man skapar och använder egna klasser i php, vad är arv, komposition, trait in php. </p>
+        <p> Har också lärt mig om vad är session, hur man sparar data och använder den sparade data från session. </p>
+        <p> Tycker att har förstått mycket bättre hur Symfony fungerar och hur koden struktureras i src/controllers (C:et i MVC) först och sedan data visas i html.twig filerna (V:et i MVC) enligt MVC. </p>
+        <p> I helhet tyckte att det var rätt svårt uppgift, men mycket givande, för att har lärt mig mycket nytt om symfony, session och hur man skapar och använder klasser med objektorienterade konstruktionerna i php. </p>
 
         <h2 id="kmom03">kmom03</h2>
 
