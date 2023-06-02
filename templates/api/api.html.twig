@@ -12,15 +12,15 @@
         <a href="{{ path('api_quote') }}">Quotes - api </a> <br>
         <a href="{{ path('api_deck') }}">All cards sorted - api </a> <br>
 
-        <form method="post" action="/api/deck/shuffle">
+        <form method="post" action= {{ path('api_deck_shuffle_post') }}>
             <input type="submit" value=" Api shuffle cards">
         </form>
 
-        <form method="post" action="/api/deck/draw">
+        <form method="post" action= {{ path('api_deck_draw') }}>
             <input type="submit" value="Api draw one card">
         </form>
 
-        <form method="post" action="/api/deck/draw/5">
+        <form method="post" action= {{ path('api_deck_draw_number') }}>
             <input type="submit" value="Api draw five cards">
         </form>
 
