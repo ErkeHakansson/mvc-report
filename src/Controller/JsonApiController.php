@@ -90,7 +90,7 @@ class JsonApiController
     }
 
 
-    #[Route("/api/deck/shuffle", name: "api_deck_shuffle_post", methods: ['POST'])]
+    #[Route("/api/deck/shuffle", name: "api_deck_shuffle_post", methods: ['GET', 'POST'])]
     public function jsonApiShuffle_post(): Response
     {
 
@@ -99,7 +99,6 @@ class JsonApiController
 
         $data = [
             "cardsShuffled" => $cardsShuffled,
-            "post",
         ];
 
         $response = new JsonResponse($data);
@@ -110,7 +109,7 @@ class JsonApiController
     }
 
 
-    #[Route("/api/deck/draw", name: "api_deck_draw", methods: ['POST'])]
+    #[Route("/api/deck/draw", name: "api_deck_draw", methods: ['GET', 'POST'])]
     public function jsonApiDraw_post(
         SessionInterface $session
     ): Response {
@@ -142,7 +141,6 @@ class JsonApiController
         $data = [
             "draw_one_card" => $one_card,  // draw one card
             "num_cards_left" => $numCardsLeft_new, // beräknar antal kort kvar
-            "post",
         ];
 
         $response = new JsonResponse($data);
@@ -152,9 +150,8 @@ class JsonApiController
         return $response;
     }
 
-    #[Route("/api/deck/draw/{num<\d+>}", name: "api_deck_draw_number", methods: ['POST'])]
+    #[Route("/api/deck/draw/five", name: "api_deck_draw_number", methods: ['GET', 'POST'])]
     public function jsonApiDrawNumber_post(
-        int $num,
         SessionInterface $session
     ): Response {
 
@@ -166,7 +163,7 @@ class JsonApiController
         $cards_left_in_array = $session->get("cards_left_in_array_json_five", $cardsShuffled); // får result array sparat i session
 
         // Visar fem cards from main array
-        $five_cards = array_slice(array_unique($cards_left_in_array), 0, $num);
+        $five_cards = array_slice(array_unique($cards_left_in_array), 0, 5);
 
         // Removing five cards from cards deck med array_diff funktion
         $result_diff = array_diff(array_values($cards_left_in_array), array_unique($five_cards)); // finding differences between two arrays, t.ex. 52 - 5 = 47
@@ -184,7 +181,6 @@ class JsonApiController
         $data = [
             "draw_five_cards" => $five_cards,  // draw five cards
             "num_cards_left" => $numCardsLeft_new, // antal kort kvar
-            "post",
         ];
 
         $response = new JsonResponse($data);
